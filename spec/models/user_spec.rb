@@ -28,17 +28,17 @@ RSpec.describe User, type: :model do
 
     it 'returns three recent posts' do
       user = User.create(name: 'otsama', photo: 'photo', bio: 'software developer', post_counter: 5)
-      post1 = Post.create(title: 'test title', text: 'test text', comments_counter: 1, likes_counter: 1,
+      post1 = Post.create(title: 'test title 1', text: 'test text', comments_counter: 1, likes_counter: 1,
                           author_id: user.id)
-      post2 = Post.create(title: 'test title', text: 'test text', comments_counter: 1, likes_counter: 1,
+      post2 = Post.create(title: 'test title 2', text: 'test text', comments_counter: 1, likes_counter: 1,
                           author_id: user.id)
-      post3 = Post.create(title: 'test title', text: 'test text', comments_counter: 1, likes_counter: 1,
+      post3 = Post.create(title: 'test title 3', text: 'test text', comments_counter: 1, likes_counter: 1,
                           author_id: user.id)
-      post4 = Post.create(title: 'test title', text: 'test text', comments_counter: 1, likes_counter: 1,
+      post4 = Post.create(title: 'test title 4', text: 'test text', comments_counter: 1, likes_counter: 1,
                           author_id: user.id)
-      post5 = Post.create(title: 'test title', text: 'test text', comments_counter: 1, likes_counter: 1,
+      post5 = Post.create(title: 'test title 5', text: 'test text', comments_counter: 1, likes_counter: 1,
                           author_id: user.id)
-      post6 = Post.create(title: 'test title', text: 'test text', comments_counter: 1, likes_counter: 1,
+      post6 = Post.create(title: 'test title 6', text: 'test text', comments_counter: 1, likes_counter: 1,
                           author_id: user.id)
 
       expect(user.recent_posts).to eq([post6, post5, post4])
