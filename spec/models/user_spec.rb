@@ -28,12 +28,6 @@ RSpec.describe User, type: :model do
 
     it 'returns three recent posts' do
       user = User.create(name: 'otsama', photo: 'photo', bio: 'software developer', post_counter: 5)
-      post6 = Post.create(title: 'test title 1', text: 'test text', comments_counter: 1, likes_counter: 1,
-                          author_id: user.id)
-      post6 = Post.create(title: 'test title 2', text: 'test text', comments_counter: 1, likes_counter: 1,
-                          author_id: user.id)
-      post6 = Post.create(title: 'test title 3', text: 'test text', comments_counter: 1, likes_counter: 1,
-                          author_id: user.id)
       post4 = Post.create(title: 'test title 4', text: 'test text', comments_counter: 1, likes_counter: 1,
                           author_id: user.id)
       post5 = Post.create(title: 'test title 5', text: 'test text', comments_counter: 1, likes_counter: 1,
