@@ -56,7 +56,7 @@
 }
 
 .comment {
-  color: #0099cc;
+  color: #09c;
   margin-right: 5px;
   cursor: pointer;
 }
@@ -94,11 +94,6 @@
 }
 
 .comments-container p {
-  color: #777;
-  margin: 0;
-}
-
-.comments-container p {
   margin: 5px 0;
   color: #333;
 }
@@ -121,12 +116,12 @@
 
 .pagination-link {
   text-decoration: none;
-  background-color: #0077aa;
+  background-color: #07a;
   color: #fff;
   padding: 5px 10px;
   border-radius: 5px;
 }
 
 .pagination-link:hover {
-  background-color: #0099cc;
+  background-color: #09c;
 }
