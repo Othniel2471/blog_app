@@ -1,0 +1,51 @@
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.user-container {
+  margin: auto;
+  width: 80%;
+}
+
+.user-container h1 {
+  font-size: 24px;
+  color: #777;
+  margin: 20px;
+}
+
+.user-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.user-card:hover {
+  background-color: #f5f5f5;
+}
+
+.user-image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10%;
+}
+
+.user-content {
+  margin-left: 20px;
+}
+
+.name h3 {
+  font-size: 18px;
+  margin: 0;
+  color: #333;
+}
+
+.num-posts span {
+  font-size: 14px;
+  color: #777;
+}

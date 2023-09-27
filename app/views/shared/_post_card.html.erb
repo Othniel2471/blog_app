@@ -1,0 +1,30 @@
+<div class="post-card">
+    <div class="post-title">
+        <h3>
+            <%= post.title%>
+        </h3>
+    </div>
+    <div class="post-text">
+        <p>
+            <%= post.text%>
+        </p>
+    </div>
+    <div class="interaction">
+        <div class="likes">
+            <span class="heart">
+                <i class="fa-regular fa-heart"></i>
+            </span>
+            <span class="likes-count">
+                <%= post.likes_counter || 0 %>
+            </span>
+        </div>
+        <div class="comments">
+            <span class="comment">
+                <i class="fa-regular fa-comment"></i>
+            </span>
+            <span class="comments-count">
+                <%= post.comment_counter || 0 %>
+            </span>
+        </div>
+    </div>
+</div>

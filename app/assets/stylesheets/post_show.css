@@ -1,0 +1,29 @@
+.post-details {
+  margin: auto;
+  width: 80%;
+}
+
+.post-info {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height: 500px;
+}
+
+.post-info .post-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-info .post-header h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.post-info .post-header .post-int {
+  display: flex;
+  gap: 10px;
+}

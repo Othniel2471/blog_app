@@ -1,1 +1,10 @@
-<h1>Here's a list of users</h1>
+<div class="user-container">
+    <%if @users.empty?%>
+        <h1>There are no users yet</h1>
+    <%end%>
+    <%@users.each do |user|%>
+        <a href="/users/<%= user.id%>">
+            <%= render partial: 'shared/user_card', locals: {user: user} %>
+        </a>
+    <%end%>
+</div>
