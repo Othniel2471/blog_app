@@ -2,10 +2,10 @@
 
 one:
   text: MyText
-  comments_counter: 1
+  comment_counter: 1
   likes_counter: 1
 
 two:
   text: MyText
-  comments_counter: 1
+  comment_counter: 1
   likes_counter: 1
