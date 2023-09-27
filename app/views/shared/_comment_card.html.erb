@@ -1,0 +1,7 @@
+<div class="comment-card">
+    <div class="card-body">
+        <% comments.each do |comment| %>
+            <p><span class="author-name"><%= comment.author.name %></span>: <span class="comment-text"><%= comment.text %></span></p>
+        <% end %>
+    </div>
+</div>
