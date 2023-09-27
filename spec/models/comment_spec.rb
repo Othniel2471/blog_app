@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
   describe 'Comment Model' do
-    let(:user) { User.create(name: 'otsama', photo: 'photo', bio: 'software developer', post_counter: 5) }
-    let(:post) { Post.create(title: 'test title', text: 'test text', comments_counter: 1, likes_counter: 1) }
+    let(:user) { User.create(name: 'otsama', photo: 'photo', bio: 'software developer', posts_counter: 5) }
+    let(:post) { Post.create(title: 'test title', text: 'test text', comment_counter: 1, likes_counter: 1) }
 
     it 'text should not be blank' do
       comment = Comment.new(author_id: user.id, post_id: post.id, text: 'this is comment')

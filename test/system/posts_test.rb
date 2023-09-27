@@ -14,7 +14,7 @@ class PostsTest < ApplicationSystemTestCase
     visit posts_url
     click_on 'New post'
 
-    fill_in 'Comments counter', with: @post.comments_counter
+    fill_in 'Comments counter', with: @post.comment_counter
     fill_in 'Likes counter', with: @post.likes_counter
     fill_in 'Text', with: @post.text
     fill_in 'Title', with: @post.title
@@ -28,7 +28,7 @@ class PostsTest < ApplicationSystemTestCase
     visit post_url(@post)
     click_on 'Edit this post', match: :first
 
-    fill_in 'Comments counter', with: @post.comments_counter
+    fill_in 'Comments counter', with: @post.comment_counter
     fill_in 'Likes counter', with: @post.likes_counter
     fill_in 'Text', with: @post.text
     fill_in 'Title', with: @post.title

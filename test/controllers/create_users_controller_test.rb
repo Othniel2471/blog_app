@@ -19,7 +19,7 @@ class CreateUsersControllerTest < ActionDispatch::IntegrationTest
     assert_difference('CreateUser.count') do
       post create_users_url,
            params: { create_user: { bio: @create_user.bio, name: @create_user.name, photo: @create_user.photo,
-                                    post_counter: @create_user.post_counter } }
+                                    posts_counter: @create_user.posts_counter } }
     end
 
     assert_redirected_to create_user_url(CreateUser.last)
@@ -38,7 +38,7 @@ class CreateUsersControllerTest < ActionDispatch::IntegrationTest
   test 'should update create_user' do
     patch create_user_url(@create_user),
           params: { create_user: { bio: @create_user.bio, name: @create_user.name, photo: @create_user.photo,
-                                   post_counter: @create_user.post_counter } }
+                                   posts_counter: @create_user.posts_counter } }
     assert_redirected_to create_user_url(@create_user)
   end
 

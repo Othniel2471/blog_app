@@ -18,20 +18,20 @@ RSpec.describe Post, type: :model do
       expect(post.errors[:title]).to include('is too long (maximum is 250 characters)')
     end
 
-    it 'comments_counter must be an integer' do
-      post = Post.new(comments_counter: 'a')
+    it 'comment_counter must be an integer' do
+      post = Post.new(comment_counter: 'a')
 
       post.valid?
 
-      expect(post.errors[:comments_counter]).to include('is not a number')
+      expect(post.errors[:comment_counter]).to include('is not a number')
     end
 
-    it 'comments_counter must be greater than or equal to 0' do
-      post = Post.new(comments_counter: -1)
+    it 'comment_counter must be greater than or equal to 0' do
+      post = Post.new(comment_counter: -1)
 
       post.valid?
 
-      expect(post.errors[:comments_counter]).to include('must be greater than or equal to 0')
+      expect(post.errors[:comment_counter]).to include('must be greater than or equal to 0')
     end
 
     it 'likes_counter must be an integer' do

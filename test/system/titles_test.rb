@@ -14,7 +14,7 @@ class TitlesTest < ApplicationSystemTestCase
     visit titles_url
     click_on 'New title'
 
-    fill_in 'Comments counter', with: @title.comments_counter
+    fill_in 'Comments counter', with: @title.comment_counter
     fill_in 'Likes counter', with: @title.likes_counter
     fill_in 'Text', with: @title.text
     click_on 'Create Title'
@@ -27,7 +27,7 @@ class TitlesTest < ApplicationSystemTestCase
     visit title_url(@title)
     click_on 'Edit this title', match: :first
 
-    fill_in 'Comments counter', with: @title.comments_counter
+    fill_in 'Comments counter', with: @title.comment_counter
     fill_in 'Likes counter', with: @title.likes_counter
     fill_in 'Text', with: @title.text
     click_on 'Update Title'

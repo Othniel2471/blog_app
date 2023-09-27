@@ -17,7 +17,7 @@ class CreateUsersTest < ApplicationSystemTestCase
     fill_in 'Bio', with: @create_user.bio
     fill_in 'Name', with: @create_user.name
     fill_in 'Photo', with: @create_user.photo
-    fill_in 'Post counter', with: @create_user.post_counter
+    fill_in 'Post counter', with: @create_user.posts_counter
     click_on 'Create Create user'
 
     assert_text 'Create user was successfully created'
@@ -31,7 +31,7 @@ class CreateUsersTest < ApplicationSystemTestCase
     fill_in 'Bio', with: @create_user.bio
     fill_in 'Name', with: @create_user.name
     fill_in 'Photo', with: @create_user.photo
-    fill_in 'Post counter', with: @create_user.post_counter
+    fill_in 'Post counter', with: @create_user.posts_counter
     click_on 'Update Create user'
 
     assert_text 'Create user was successfully updated'

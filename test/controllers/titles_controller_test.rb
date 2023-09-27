@@ -18,7 +18,7 @@ class TitlesControllerTest < ActionDispatch::IntegrationTest
   test 'should create title' do
     assert_difference('Title.count') do
       post titles_url,
-           params: { title: { comments_counter: @title.comments_counter, likes_counter: @title.likes_counter,
+           params: { title: { comment_counter: @title.comment_counter, likes_counter: @title.likes_counter,
                               text: @title.text } }
     end
 
@@ -37,7 +37,7 @@ class TitlesControllerTest < ActionDispatch::IntegrationTest
 
   test 'should update title' do
     patch title_url(@title),
-          params: { title: { comments_counter: @title.comments_counter, likes_counter: @title.likes_counter,
+          params: { title: { comment_counter: @title.comment_counter, likes_counter: @title.likes_counter,
                              text: @title.text } }
     assert_redirected_to title_url(@title)
   end
