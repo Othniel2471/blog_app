@@ -1,20 +1,34 @@
 class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
-    page = params[:page].to_i || 1
-    @per_page = 10
-
-    page = 1 if page < 1
-
-    offset = (@per_page * (page - 1))
-
-    @posts = @user.posts.limit(@per_page).offset(offset)
-
-    @total_posts_count = @user.posts.count
+    @posts = @user.posts
   end
 
   def show
     @user = User.find(params[:user_id])
     @post = @user.posts.find(params[:id])
+  end
+
+  def new
+    @post = Post.new
+  end
+
+def create
+    @post = Post.new(post_params)
+    @post.author = current_user
+
+    if @post.save
+      redirect_to user_posts_path(current_user, @post)
+      # flash[:notice] = 'Post was successfully added.'
+    else
+      render :new
+      # flash[:alert] = 'Post was not added, all fields are required.'
+    end
+  end
+
+  # private
+
+  def post_params
+    params.require(:post).permit(:title, :text)
   end
 end

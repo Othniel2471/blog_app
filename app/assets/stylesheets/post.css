@@ -125,3 +125,38 @@
 .pagination-link:hover {
   background-color: #09c;
 }
+
+/* Style form labels */
+.form label {
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Style form text fields and text areas */
+.form input[type='text'],
+.form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Style form submit button */
+.submit-btn {
+  background-color: #0077aa;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #0099cc;
+}
