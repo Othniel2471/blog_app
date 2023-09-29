@@ -1,0 +1,14 @@
+<div class="new-comment">
+    <h1>comment</h1>
+    <%= form_with model: @comment, url: user_post_comments_path do |form| %>
+    <div class="text-container">
+        <%= form.label :text%>
+        <%= form.text_area :text, cols: 30, rows:10%><br>
+    </div>
+    
+        <div class="btn-container">
+            <%= form.submit "Submit", class:"btn" %>
+        <%= link_to 'Back to post', user_post_path(@post.author, @post), class: 'back-btn' %>
+        </div>
+    <% end %>
+</div>

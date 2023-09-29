@@ -13,20 +13,18 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
-def create
+  def create
     @post = Post.new(post_params)
     @post.author = current_user
 
     if @post.save
       redirect_to user_posts_path(current_user, @post)
-      # flash[:notice] = 'Post was successfully added.'
     else
       render :new
-      # flash[:alert] = 'Post was not added, all fields are required.'
     end
   end
 
-  # private
+  private
 
   def post_params
     params.require(:post).permit(:title, :text)
