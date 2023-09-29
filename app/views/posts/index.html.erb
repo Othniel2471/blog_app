@@ -20,24 +20,9 @@
         <% end %>
     </div>
 
-    <div class="pagination">
-    <% if @total_posts_count > @per_page %>
-      <nav>
-        <ul class="pagination-list">
-          <% if @posts.any? %>
-            <% prev_page = @posts.first.id > 1 ? @posts.first.id - 1 : nil %>
-            <% next_page = @posts.last.id < @total_posts_count ? @posts.last.id + 1 : nil %>
+    <div class="new-post">
+        <%= link_to 'Create post', new_user_post_path, class: 'btn' %>
+    </div>
 
-            <li class="pagination-item">
-              <%= link_to "Previous", user_posts_path(user_id: @user.id, page: prev_page), class: 'pagination-link' if prev_page %>
-            </li>
-
-            <li class="pagination-item">
-              <%= link_to "Next", user_posts_path(user_id: @user.id, page: next_page), class: 'pagination-link' if next_page %>
-            </li>
-          <% end %>
-        </ul>
-      </nav>
-    <% end %>
-  </div>
+    
 </div>

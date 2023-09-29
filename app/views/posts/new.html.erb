@@ -1,0 +1,17 @@
+
+    <div class="post-form">
+        <%= form_with model: @post, url: user_posts_path, class: 'form_container' do |form| %>
+            <div class='form'>
+            <%= form.label :title %>
+            <%= form.text_field :title, placeholder: 'Greatest in the world' %>
+            </div>
+
+            <div class='form_group'>
+            <%= form.label :text %>
+            <%= form.text_area :text, placeholder: 'What do you have in mind' %>
+            </div>
+
+            <%= form.submit 'Add post', class: 'submit-btn' %>
+            <%# <%= link_to 'Back to posts', user_posts_path, class: 'back_btn' %> 
+        <% end %>
+    </div>
