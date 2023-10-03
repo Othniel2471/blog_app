@@ -42,7 +42,7 @@ RSpec.describe 'Posts index', type: :feature do
     expect(page).to have_content('otsama')
   end
 
-  it "shows the comment each commentor left" do
+  it 'shows the comment each commentor left' do
     expect(page).to have_content('test text')
   end
 end
