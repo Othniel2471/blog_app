@@ -38,6 +38,11 @@ RSpec.describe 'Users show', type: :feature do
     expect(page).to have_link('See All Posts')
   end
 
+  it "When I click a user's post, it redirects me to that post's show page" do
+    click_on 'test title 4'
+    expect(page).to have_content('test title 4')
+  end
+
   it "when click on 'See All Posts', it redirects to user's posts index page" do
     click_link('See All Posts')
     expect(page).to have_content('test title 6')

@@ -131,6 +131,16 @@ it will run the the server on `localhost:3000`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Tests
+
+to run tests for this project
+
+```cmd
+    rspec spec/features
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## 👥 Author <a name="author"></a>
 
 👤 **OMAIDU OTHNIEL**

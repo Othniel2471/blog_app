@@ -12,7 +12,9 @@
         <h3 class="rp">Recent Posts</h3>
         <% if @user.recent_posts.present? %>
             <% @user.recent_posts.each do |post| %>
-                <%= render 'shared/post_card', post: post %>
+                <%= link_to user_post_path(user_id: post.author.id, id: post.id), class: 'post-item' do %>
+                    <%= render 'shared/post_card', post: post %>
+                <% end %>
             <% end %>
         <% end %>
     </div>
