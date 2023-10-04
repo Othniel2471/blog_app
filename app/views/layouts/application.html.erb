@@ -12,10 +12,12 @@
     <%= stylesheet_link_tag "user_show", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "post", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "post_show", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "sign_up", "data-turbo-track": "reload" %>
   </head>
 
   <body>
-    <% render partial: 'shared/flashes' %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>

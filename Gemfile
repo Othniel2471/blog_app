@@ -8,6 +8,8 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 
 gem 'will_paginate'
 
+gem 'devise'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.8'
 
