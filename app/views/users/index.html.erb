@@ -1,6 +1,6 @@
 <div class="user-container">
 <div class="log-out-cont">
-  <%= button_to "Log out", destroy_user_session_path, method: :delete, class: "log-out-button" %>
+  <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "log-out-button" %>
 </div>
     <%if @users.empty?%>
         <h1>There are no users yet</h1>
