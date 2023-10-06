@@ -28,7 +28,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.includes(:likes).find(params[:id])
     @author = @post.author
-    # @author.decrement!(:post_counter)
+    @author.decrement!(:posts_counter)
     @post.likes.destroy_all
     @post.destroy!
 
